@@ -8,7 +8,7 @@ namespace HomeworkClassAuto.Interfaces
 {
     internal interface ICar
     {
-        string Name { get; set; }
+        string name { get; set; }
         IEngine engineType { get; set; }
         ITransmission transType { get; set; }
 

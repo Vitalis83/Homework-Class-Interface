@@ -1,4 +1,6 @@
-﻿namespace HomeworkClassAuto
+﻿using System.Xml.Linq;
+
+namespace HomeworkClassAuto
 {
     internal class Program
     {
@@ -13,9 +15,9 @@
 
             var carList = new List<CarClass>()
             {
-            new CarClass() { Name = "Accent", engineType = engine1, transType = trans1 },
-            new CarClass() { Name = "Lamba", engineType = engine2, transType = trans2 },
-            new CarClass() { Name = "Taxi", engineType = engine2, transType = trans3 }
+            new CarClass("Accent", engine1, trans1),
+            new CarClass("Lamba", engine2, trans2) ,
+            new CarClass("Taxi", engine2, trans3 )
             };
 
 
@@ -30,7 +32,7 @@
                 { winner = car; }
             }
 
-            Console.WriteLine($"And the winner is {winner.Name} with speed {winner.MaxCarSpeed()}");
+            Console.WriteLine($"And the winner is {winner.name} with speed {winner.MaxCarSpeed()}");
             
             
         }

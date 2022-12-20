@@ -9,10 +9,17 @@ namespace HomeworkClassAuto
 {
     internal class CarClass : ICar
     {
-        public string Name { get; set; }
+        public string name { get; set; }
         public IEngine engineType { get; set; }
         public ITransmission transType { get; set; }
+        
+        internal CarClass(string Name, IEngine EngineType, ITransmission TransType) 
+        {
+            this.name = Name;
+            this.engineType = EngineType;
+            this.transType = TransType;
 
+        }
         
         public int MaxCarSpeed()
         {
